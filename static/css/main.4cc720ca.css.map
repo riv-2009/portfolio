@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.4cc720ca.css","mappings":"AAAA,QAEE,qBAAuB,CACvB,UAAY,CAFZ,aAGF,CACA,OACE,aACF","sources":["index.css"],"sourcesContent":[".header{\n  padding: 150px;\n  background-color: black;\n  color: white;\n}\n.green{\n  color: #68D391;\n}\n"],"names":[],"sourceRoot":""}
