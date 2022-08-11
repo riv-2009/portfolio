@@ -20,7 +20,7 @@ const Header = () => {
                     HI, I'm <span className="green">Matt</span>
                 </Heading>
             </Center>
-            <Center>
+            <Center display={{ md: "flex" }} >
                 <Text fontSize="xl" m={10}>
                     I'm a final year computer science student at{" "}
                     <Link
@@ -35,7 +35,7 @@ const Header = () => {
             </Center>
             <Center>
                 <Button
-                    colorScheme=""
+                    colorScheme="green"
                     color="green.300"
                     variant="outline"
                     onClick={handleClick}
