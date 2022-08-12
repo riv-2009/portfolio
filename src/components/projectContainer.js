@@ -62,8 +62,7 @@ const ProjectContainer = ({
     const handleClick = (e) => {
         switch (e.target.value) {
             case "hang-front-end":
-                window.location.href =
-                    "https://github.com/riv-2009/hangman";
+                window.location.href = "https://github.com/riv-2009/hangman";
                 break;
             case "hang-snippet":
                 onOpen();
@@ -77,6 +76,28 @@ const ProjectContainer = ({
                     "https://github.com/riv-2009/bankproject-back-end";
                 break;
             case "bank-snippet":
+                onOpen();
+                break;
+            case "stock-front-end":
+                window.location.href =
+                    "https://github.com/riv-2009/stock-investing-ui";
+                break;
+            case "stock-back-end":
+                window.location.href =
+                    "https://github.com/riv-2009/StockInvesting";
+                break;
+            case "stock-snippet":
+                onOpen();
+                break;
+            case "word-front-end":
+                window.location.href =
+                    "https://github.com/riv-2009/word-grid-ui";
+                break;
+            case "word-back-end":
+                window.location.href =
+                    "https://github.com/riv-2009/word-grid-back-end";
+                break;
+            case "word-snippet":
                 onOpen();
                 break;
         }
@@ -110,6 +131,9 @@ const ProjectContainer = ({
             </Center>
 
             <Grid templateColumns="repeat(5, 1fr)" gap={4}>
+                <GridItem colSpan={3} mt={5}>
+                    <Text id="projectDesc">{desc}</Text>
+                </GridItem>
                 <GridItem colSpan={2} mt={5}>
                     <Text
                         m={5}
@@ -133,11 +157,6 @@ const ProjectContainer = ({
                         <MadeWithLogo logos={wordLogos}></MadeWithLogo>
                     )}
                 </GridItem>
-                <GridItem colSpan={3}>
-                    <Text mt={3} color="gray.500">
-                        {desc}
-                    </Text>
-                </GridItem>
             </Grid>
             <ProjectButtons
                 handleClick={handleClick}
@@ -153,5 +172,3 @@ const ProjectContainer = ({
     );
 };
 export default ProjectContainer;
-
-

@@ -18,9 +18,14 @@ const SnippetDrawer = ({ onClose, isOpen, header, snippet }) => {
                 <DrawerHeader>{header}</DrawerHeader>
                 <hr />
                 <DrawerBody>
-                    <Code>
-                        <Box>{snippet}</Box>
-                    </Code>
+                    {snippet.map((code,index) => (
+                        <Box key={index}>
+                            <pre>
+                                {" "}
+                                <Code m={5}>{code}</Code>
+                            </pre>
+                        </Box>
+                    ))}
                 </DrawerBody>
             </DrawerContent>
         </Drawer>

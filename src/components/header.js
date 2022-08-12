@@ -48,7 +48,7 @@ const Header = () => {
                     </BreadcrumbLink>
                 </BreadcrumbItem>
 
-                <BreadcrumbItem >
+                {/* <BreadcrumbItem >
                     <BreadcrumbLink fontWeight="bold" href="#">
                         <Icon m={1} as={FaTools} /> Skills
                     </BreadcrumbLink>
@@ -57,7 +57,7 @@ const Header = () => {
                     <BreadcrumbLink fontWeight="bold" href="#">
                         <Icon m={1} as={AiOutlineMail} /> Contact
                     </BreadcrumbLink>
-                </BreadcrumbItem>
+                </BreadcrumbItem> */}
             </Breadcrumb>
             <Center>
                 <Heading as="h1" m={10}>
