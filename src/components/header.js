@@ -9,8 +9,8 @@ import {
 } from "@chakra-ui/react";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import { AiFillGithub } from "react-icons/ai";
-import { FaTools } from "react-icons/fa";
-import { AiOutlineMail } from "react-icons/ai";
+//import { FaTools } from "react-icons/fa";
+//import { AiOutlineMail } from "react-icons/ai";
 import { BsCodeSlash } from "react-icons/bs";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
 
