@@ -4,10 +4,9 @@ import {
     Center,
     Grid,
     GridItem,
-    Image,
-    Button,
-    Icon,
+    useDisclosure,
 } from "@chakra-ui/react";
+import ProjectButtons from "./projectButtons";
 import SimpleSlider from "./simpleSlider";
 import cSharp from "./logos/c#.png";
 import bootstrap from "./logos/bootstrap.jpg";
@@ -15,15 +14,23 @@ import chakra from "./logos/chakra.jpg";
 import js from "./logos/javascript.png";
 import material from "./logos/material.png";
 import mysql from "./logos/mysql.png";
-import php from "./logos/php.jpg";
+import php from "./logos/php.png";
 import react from "./logos/react.png";
 import MadeWithLogo from "./madeWithLogo";
 import ef from "./logos/ef.jpg";
 import { useState } from "react";
-import { AiFillGithub, } from "react-icons/ai";
-import { VscSymbolSnippet } from "react-icons/vsc";
 
-const ProjectContainer = ({ img, title, subTitle, desc }) => {
+const ProjectContainer = ({
+    img,
+    title,
+    subTitle,
+    desc,
+    front,
+    back,
+    code,
+    header,
+    snippet,
+}) => {
     const [bankLogos, setBankLogos] = useState([
         cSharp,
         ef,
@@ -32,8 +39,47 @@ const ProjectContainer = ({ img, title, subTitle, desc }) => {
         bootstrap,
         js,
     ]);
+    const [stockLogos, setStockLogos] = useState([
+        cSharp,
+        ef,
+        mysql,
+        react,
+        bootstrap,
+        js,
+        material,
+    ]);
+    const [wordLogos, setWordLogos] = useState([
+        cSharp,
+        ef,
+        mysql,
+        react,
+        chakra,
+        js,
+    ]);
+    const [hangLogos, setHangLogos] = useState([php, mysql, bootstrap, js]);
+    const { isOpen, onOpen, onClose } = useDisclosure();
+
     const handleClick = (e) => {
-        alert(e.target.value + " click");
+        switch (e.target.value) {
+            case "hang-front-end":
+                window.location.href =
+                    "https://github.com/riv-2009/hangman";
+                break;
+            case "hang-snippet":
+                onOpen();
+                break;
+            case "bank-front-end":
+                window.location.href =
+                    "https://github.com/riv-2009/bankproject-ui";
+                break;
+            case "bank-back-end":
+                window.location.href =
+                    "https://github.com/riv-2009/bankproject-back-end";
+                break;
+            case "bank-snippet":
+                onOpen();
+                break;
+        }
     };
     return (
         <>
@@ -49,7 +95,7 @@ const ProjectContainer = ({ img, title, subTitle, desc }) => {
                 </Text>
             </Center>
             <Box>
-                <SimpleSlider img={img} alt="bank-app"></SimpleSlider>
+                <SimpleSlider img={img} alt=""></SimpleSlider>
             </Box>
 
             <Center mt={10}>
@@ -67,57 +113,45 @@ const ProjectContainer = ({ img, title, subTitle, desc }) => {
                 <GridItem colSpan={2} mt={5}>
                     <Text
                         m={5}
+                        display="inline"
                         color="gray.500"
                         fontWeight="bold"
                         fontSize="lg"
                     >
                         Made with:
-                        <MadeWithLogo logos={bankLogos}></MadeWithLogo>
                     </Text>
+                    {title == "hangman" && (
+                        <MadeWithLogo logos={hangLogos}></MadeWithLogo>
+                    )}
+                    {title == "bank app" && (
+                        <MadeWithLogo logos={bankLogos}></MadeWithLogo>
+                    )}
+                    {title == "stock investing practice" && (
+                        <MadeWithLogo logos={stockLogos}></MadeWithLogo>
+                    )}
+                    {title == "word finder" && (
+                        <MadeWithLogo logos={wordLogos}></MadeWithLogo>
+                    )}
                 </GridItem>
                 <GridItem colSpan={3}>
                     <Text mt={3} color="gray.500">
                         {desc}
                     </Text>
-                    <Center mt={5}>
-                        <Button
-                            value="snippet"
-                            border="solid"
-                            borderColor="#68D391"
-                            color="#68D391"
-                            variant="outline"
-                            onClick={handleClick}
-                        >
-                            <Icon as={VscSymbolSnippet} color="green.300" />
-                            Code Snippets
-                        </Button>
-                        <Button
-                            m={5}
-                            value="front-end"
-                            border="solid"
-                            borderColor="#68D391"
-                            color="#68D391"
-                            variant="outline"
-                            onClick={handleClick}
-                        >
-                            <Icon as={AiFillGithub} color="green.300" /> Front
-                            End Code
-                        </Button>
-                        <Button
-                            value="back-end"
-                            border="solid"
-                            borderColor="#68D391"
-                            color="#68D391"
-                            variant="outline"
-                            onClick={handleClick}
-                        >
-                            <Icon as={AiFillGithub} color="green.300" /> Back
-                            End Code
-                        </Button>
-                    </Center>
                 </GridItem>
             </Grid>
+            <ProjectButtons
+                handleClick={handleClick}
+                front={front}
+                back={back}
+                snippet={snippet}
+                code={code}
+                header={header}
+                isOpen={isOpen}
+                onClose={onClose}
+            ></ProjectButtons>
         </>
     );
 };
 export default ProjectContainer;
+
+
