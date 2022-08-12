@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.9db296c1.css",
-    "main.js": "/portfolio/static/js/main.f5de1723.js",
+    "main.css": "/portfolio/static/css/main.23f10547.css",
+    "main.js": "/portfolio/static/js/main.d74684c8.js",
+    "static/media/php.png": "/portfolio/static/media/php.51ee693d6205b1bfd783.png",
     "static/media/react.png": "/portfolio/static/media/react.fb59dfc6bb1bac6b0ad0.png",
     "static/media/javascript.png": "/portfolio/static/media/javascript.92169892ea013a5154bd.png",
+    "static/media/game-over.png": "/portfolio/static/media/game-over.c1aa826c9c427dbf7aa0.png",
+    "static/media/game.png": "/portfolio/static/media/game.52435e9e45a5cbf7466d.png",
+    "static/media/results.png": "/portfolio/static/media/results.aa7b8af4ef7727c24872.png",
     "static/media/chakra.jpg": "/portfolio/static/media/chakra.43b5b7977014e982e943.jpg",
-    "static/media/php.jpg": "/portfolio/static/media/php.e02414379822a4267f88.jpg",
     "static/media/sign-up.png": "/portfolio/static/media/sign-up.d23983a10743a0ce6f87.png",
     "static/media/transactions.png": "/portfolio/static/media/transactions.d9a1562d89fcec1d315c.png",
+    "static/media/signup.png": "/portfolio/static/media/signup.a29f2294047cfad91a98.png",
     "static/media/transfer.png": "/portfolio/static/media/transfer.7bd8ebbb62dc0b40e3ee.png",
-    "static/media/login.png": "/portfolio/static/media/login.7fab3d5facbf1d656973.png",
+    "static/media/login.png": "/portfolio/static/media/login.9ddf9f9ee03dd03f82ad.png",
     "static/media/deposit.png": "/portfolio/static/media/deposit.44f111cd9137461cc35f.png",
     "static/media/withdraw.png": "/portfolio/static/media/withdraw.c82fe14a70e318c12681.png",
     "static/media/bootstrap.jpg": "/portfolio/static/media/bootstrap.7c2df4bcd450d7a947a9.jpg",
@@ -21,11 +25,11 @@
     "static/media/slick.ttf": "/portfolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/portfolio/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/portfolio/index.html",
-    "main.9db296c1.css.map": "/portfolio/static/css/main.9db296c1.css.map",
-    "main.f5de1723.js.map": "/portfolio/static/js/main.f5de1723.js.map"
+    "main.23f10547.css.map": "/portfolio/static/css/main.23f10547.css.map",
+    "main.d74684c8.js.map": "/portfolio/static/js/main.d74684c8.js.map"
   },
   "entrypoints": [
-    "static/css/main.9db296c1.css",
-    "static/js/main.f5de1723.js"
+    "static/css/main.23f10547.css",
+    "static/js/main.d74684c8.js"
   ]
 }
