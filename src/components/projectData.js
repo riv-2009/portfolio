@@ -19,7 +19,7 @@ import word3 from "../images/word/word3.png";
 import word5 from "../images/word/word5.png";
 import word6 from "../images/word/word6.png";
 import word7 from "../images/word/word7.png";
-import { Heading, Center, Box } from "@chakra-ui/react";
+import { Heading, Center, Box, Link } from "@chakra-ui/react";
 import ProjectContainer from "./projectContainer";
 import { useState } from "react";
 
@@ -52,10 +52,12 @@ const ProjectData = () => {
         "This project was a simple bank app. The frontend was coded in react and used bootstrap to style the site. The backend of this project utilized .NET and used Entity Framework to work with the data within a mysql database. This project had a login system and signup process to verify credentials which had a minimum requirement validation implemented. Once sucessful the username, hashed and salted password is stored in the mysql database. Once logged into the system you are allowed to withdraw money, deposit money, transfer money, see transactions on your accounts and logout.";
     const stockSubTitle =
         "A game simulating how to invest in the stock market by looking at prior data.";
-    const stockDesc = "This stock investing practice app was coded in c#, entity framework, and mysql on the server side and the client side ui was coded in react and used bootstrap and material ui. The goal of this project was to simulate how your investments would perform if you bought stock on a random consective days in the past, you have the choice to buy, sell, hold, or quit the game early and try to see if you make or lose money over that period. The project used polygon.io to make api calls against in order to get the historical data of the stock ticker that you select. The program used asynchronous communication through signalr to send data. The ui also had three options to enter data to buy or sell the stock, they were through a slider, input box and pie chart.";
+    const stockDesc =
+        "This stock investing practice app was coded in c#, entity framework, and mysql on the server side and the client side ui was coded in react and used bootstrap and material ui. The goal of this project was to simulate how your investments would perform if you bought stock on a random consective days in the past, you have the choice to buy, sell, hold, or quit the game early and try to see if you make or lose money over that period. The project used polygon.io to make api calls against in order to get the historical data of the stock ticker that you select. The program used asynchronous communication through signalr to send data. The ui also had three options to enter data to buy or sell the stock, they were through a slider, input box and pie chart.";
     const wordSubTitle =
         "A two player asynchronous game, where both players see the same grid and compete for a higher score.";
-    const wordDesc = "This project was coded in C# and used entity framework and mysql on the server side and the frontend used react and chakra-ui to style the program. The goal of this project was to make a two player asynchronous game and to accomplish this my group used signalr. The game itself organizes letters in a 4x4 grid similar to the game of boggle. Both players see the same grid when the game starts and a two minunte timer starts for them to find as many words as they can before the time is up. Each letter in the grid has a 40 percent chance of generating a vowel but the letter were tweaked so that more comman constants would show up. We imported around 375,000 words into a database for the server side code to check against and then relayed back to the player via signalr if the word was valid. The end of the game shows a result screen of who won. This game was also designed to be mobile freindly using the chakra ui library.";
+    const wordDesc =
+        "This project was coded in C# and used entity framework and mysql on the server side and the frontend used react and chakra-ui to style the program. The goal of this project was to make a two player asynchronous game and to accomplish this my group used signalr. The game itself organizes letters in a 4x4 grid similar to the game of boggle. Both players see the same grid when the game starts and a two minunte timer starts for them to find as many words as they can before the time is up. Each letter in the grid has a 40 percent chance of generating a vowel but the letter were tweaked so that more comman constants would show up. We imported around 375,000 words into a database for the server side code to check against and then relayed back to the player via signalr if the word was valid. The end of the game shows a result screen of who won. This game was also designed to be mobile freindly using the chakra ui library.";
 
     const [hangmanCode, setHangmanCode] = useState([
         `
@@ -256,7 +258,8 @@ const ProjectData = () => {
    
     `,
     ]);
-    const [wordCode, setWordCode] = useState([`
+    const [wordCode, setWordCode] = useState([
+        `
     In this code snippet I wrote these signalr methods in C#, in order communticate 
     with the client asynchronously. I found it a challenge to work with signlr at first 
     I couldn't figure out why the frontend wasn't working like expected, after further 
@@ -349,7 +352,8 @@ const ProjectData = () => {
             }     
         }
     }
-    `, `
+    `,
+        `
     I wrote this section to display the results of who won the game. Later I implemented 
     another component to display more detailed data and then added the TWOPLAYERSCREEN below. 
     This section of code was written in React and used chakra-ui.
@@ -460,16 +464,17 @@ const ProjectData = () => {
         );
     };
     export default ResultScreen;
-    `]);
+    `,
+    ]);
     return (
-        <Box m={20} >
+        <Box m={20}>
             <Center>
                 <Heading id="project" m={10} fontWeight="bold">
                     My <span className="green">Projects</span>
                 </Heading>
             </Center>
-          
 
+            <Link id="hangman-content"></Link>
             <ProjectContainer
                 id="hangman"
                 img={imgHangmanApp}
@@ -482,7 +487,7 @@ const ProjectData = () => {
                 header="Hangman conde snippets"
                 snippet="hang-snippet"
             ></ProjectContainer>
-        
+            <Link id="bank-content"></Link>
             <ProjectContainer
                 id="bank"
                 img={imgBankApp}
@@ -495,8 +500,8 @@ const ProjectData = () => {
                 header="Bank app code snippets"
                 snippet="bank-snippet"
             ></ProjectContainer>
-           
 
+            <Link id="stock-content"></Link>
             <ProjectContainer
                 id="stock"
                 img={imgStockApp}
@@ -509,7 +514,7 @@ const ProjectData = () => {
                 header="Stock Investing Practice code snippets"
                 snippet="stock-snippet"
             ></ProjectContainer>
-         
+            <Link id="word-content"></Link>
             <ProjectContainer
                 id="word"
                 img={imgWordApp}
@@ -522,7 +527,6 @@ const ProjectData = () => {
                 header="Word Finder code snippets"
                 snippet="word-snippet"
             ></ProjectContainer>
-          
         </Box>
     );
 };

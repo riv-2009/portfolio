@@ -61,13 +61,15 @@ const Footer = () => {
                             />
                         </Box>
                     </Center>
-                    <Icon
-                        id="uparrow"
-                        as={BsArrowUpCircle}
-                        color="#FFFFFF"
-                        fontSize={30}
-                        m={2}
-                    />
+                    <Link href="#top-content">
+                        <Icon
+                            id="uparrow"
+                            as={BsArrowUpCircle}
+                            color="#FFFFFF"
+                            fontSize={30}
+                            m={2}
+                        />
+                    </Link>
                 </Box>
             </Box>
         </>

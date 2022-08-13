@@ -20,11 +20,12 @@ const Header = () => {
     };
     return (
         <Box className="header" fontSize="25px">
+            <Link id="top-content" />
             <Breadcrumb spacing="8px" separator="" align="right">
-                <BreadcrumbItem >
+                <BreadcrumbItem>
                     <BreadcrumbLink>
                         <Icon m={1} as={BsCodeSlash} />{" "}
-                        <Menu>
+                        <Menu >
                             <MenuButton fontWeight="bold">Projects</MenuButton>
                             <MenuList>
                                 <MenuItem
@@ -32,16 +33,30 @@ const Header = () => {
                                         console.log("hangman clicked")
                                     }
                                 >
-                                    Hangman
+                                    <Link href="#hangman-content">Hangman</Link>
                                 </MenuItem>
-                                <MenuItem onClick={() => console.log("bank app clicked")}>
-                                    Bank App
+                                <MenuItem
+                                    onClick={() =>
+                                        console.log("bank app clicked")
+                                    }
+                                >
+                                    <Link href="#bank-content">Bank App</Link>
                                 </MenuItem>
-                                <MenuItem onClick={() => console.log("stock investing clicked")}>
-                                    Stock Investing Practice
+                                <MenuItem
+                                    onClick={() =>
+                                        console.log("stock investing clicked")
+                                    }
+                                >
+                                    <Link href="#stock-content">
+                                        Stock Investing Practice
+                                    </Link>
                                 </MenuItem>
-                                <MenuItem onClick={() => console.log("word clicked")}>
-                                    Word Finder
+                                <MenuItem
+                                    onClick={() => console.log("word clicked")}
+                                >
+                                    <Link href="#word-content">
+                                        Word Finder
+                                    </Link>
                                 </MenuItem>
                             </MenuList>
                         </Menu>
