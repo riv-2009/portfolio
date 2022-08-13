@@ -103,7 +103,7 @@ const ProjectContainer = ({
         }
     };
     return (
-        <>
+        <Box backgroundColor="gray.100" borderRadius={10} m={10} padding={10}>
             <Center mt={50}>
                 <Text
                     fontWeight="bold"
@@ -132,7 +132,7 @@ const ProjectContainer = ({
 
             <Grid templateColumns="repeat(5, 1fr)" gap={4}>
                 <GridItem colSpan={3} mt={5}>
-                    <Text id="projectDesc">{desc}</Text>
+                    <Text id="projectDesc" backgroundColor="blue.100">{desc}</Text>
                 </GridItem>
                 <GridItem colSpan={2} mt={5}>
                     <Text
@@ -168,7 +168,7 @@ const ProjectContainer = ({
                 isOpen={isOpen}
                 onClose={onClose}
             ></ProjectButtons>
-        </>
+        </Box>
     );
 };
 export default ProjectContainer;

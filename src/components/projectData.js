@@ -462,13 +462,13 @@ const ProjectData = () => {
     export default ResultScreen;
     `]);
     return (
-        <Box m={20}>
+        <Box m={20} >
             <Center>
                 <Heading id="project" m={10} fontWeight="bold">
                     My <span className="green">Projects</span>
                 </Heading>
             </Center>
-            <hr />
+          
 
             <ProjectContainer
                 id="hangman"
@@ -482,7 +482,7 @@ const ProjectData = () => {
                 header="Hangman conde snippets"
                 snippet="hang-snippet"
             ></ProjectContainer>
-            <hr />
+        
             <ProjectContainer
                 id="bank"
                 img={imgBankApp}
@@ -495,7 +495,7 @@ const ProjectData = () => {
                 header="Bank app code snippets"
                 snippet="bank-snippet"
             ></ProjectContainer>
-            <hr />
+           
 
             <ProjectContainer
                 id="stock"
@@ -509,7 +509,7 @@ const ProjectData = () => {
                 header="Stock Investing Practice code snippets"
                 snippet="stock-snippet"
             ></ProjectContainer>
-            <hr />
+         
             <ProjectContainer
                 id="word"
                 img={imgWordApp}
@@ -522,7 +522,7 @@ const ProjectData = () => {
                 header="Word Finder code snippets"
                 snippet="word-snippet"
             ></ProjectContainer>
-            <hr />
+          
         </Box>
     );
 };

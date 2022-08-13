@@ -1,3 +1,5 @@
+
+
 .header {
     padding: 40px;
     background-color: black;
@@ -8,9 +10,22 @@
 }
 
 #projectDesc{
-    background-color: #C6F6D5;
+    /* background-color: #C6F6D5; */
     border-radius: 10px;
     padding: 20px;
     
 }
 
+#footer{
+    background-color: rgb(9, 9, 9);
+    margin-top: 100px;
+    padding: 5%;
+}
+#contactIcons{
+    display: block;
+}
+#uparrow{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
