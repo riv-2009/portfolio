@@ -144,7 +144,7 @@ const ProjectContainer = ({
                     >
                         Made with:
                     </Text>
-                    {title == "hangman" && (
+                    {title == "Hangman Game" && (
                         <MadeWithLogo logos={hangLogos}></MadeWithLogo>
                     )}
                     {title == "bank app" && (

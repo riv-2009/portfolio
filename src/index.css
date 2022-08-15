@@ -33,9 +33,9 @@
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
 	top: 0;
-    z-index: 1;
-    align-content: center;
+    float: right;
     font-size: 20px;
     color: #48BB78;
-    background-color: black;
+    margin-right: 40px;
+    margin-top: 20px;
 }
