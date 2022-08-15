@@ -1,5 +1,5 @@
 import { Heading, Center, Box, Link } from "@chakra-ui/react";
-import ProjectContainer from "./projectContainer";
+import ProjectContainer from "./projectLayout";
 import hangman from "../data/hangman";
 import bankApp from "../data/bankApp";
 import stockApp from "../data/stock";
@@ -46,7 +46,7 @@ const ProjectData = () => {
                 id="stock"
                 img={stockApp[0].images}
                 title="stock investing practice"
-                subTitle={stockApp[0].subTitle}
+                subTitle={stockApp[0].subtitle}
                 desc={stockApp[0].desc}
                 front="stock-front-end"
                 back="stock-back-end"

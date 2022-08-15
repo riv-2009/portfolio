@@ -144,16 +144,16 @@ const ProjectContainer = ({
                     >
                         Made with:
                     </Text>
-                    {title == "Hangman Game" && (
+                    {title === "Hangman Game" && (
                         <MadeWithLogo logos={hangLogos}></MadeWithLogo>
                     )}
-                    {title == "bank app" && (
+                    {title === "bank app" && (
                         <MadeWithLogo logos={bankLogos}></MadeWithLogo>
                     )}
-                    {title == "stock investing practice" && (
+                    {title === "stock investing practice" && (
                         <MadeWithLogo logos={stockLogos}></MadeWithLogo>
                     )}
-                    {title == "word finder" && (
+                    {title === "word finder" && (
                         <MadeWithLogo logos={wordLogos}></MadeWithLogo>
                     )}
                 </GridItem>
